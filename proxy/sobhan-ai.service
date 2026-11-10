@@ -1,0 +1,16 @@
+[Unit]
+Description=Sobhan Beton Claude proxy and backup
+After=network.target
+
+[Service]
+Environment=ANTHROPIC_API_KEY=sk-ant-اینجا-کلید-خودت
+Environment=APP_TOKEN=یک-رمز-طولانی-و-تصادفی
+Environment=PORT=8787
+Environment=BACKUP_DIR=/var/lib/sobhan-ai/backups
+ExecStart=/usr/bin/node /opt/sobhan-ai/server.js
+Restart=always
+DynamicUser=yes
+StateDirectory=sobhan-ai
+
+[Install]
+WantedBy=multi-user.target

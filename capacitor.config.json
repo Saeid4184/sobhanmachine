@@ -1,0 +1,8 @@
+{
+  "appId": "ir.sobhanbeton.assistant",
+  "appName": "دستیار سبحان بتن",
+  "webDir": "www",
+  "server": { "androidScheme": "https", "cleartext": true },
+  "android": { "allowMixedContent": true },
+  "plugins": { "LocalNotifications": { "iconColor": "#1f6feb" } }
+}
