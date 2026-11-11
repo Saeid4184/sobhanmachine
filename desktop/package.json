@@ -1,0 +1,38 @@
+{
+  "name": "sobhan-beton-desktop",
+  "productName": "دستیار سبحان بتن",
+  "version": "1.0.0",
+  "private": true,
+  "description": "نسخه ویندوز دستیار سبحان بتن",
+  "author": "Sobhan Beton",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "ir.sobhanbeton.assistant",
+    "productName": "SobhanBeton",
+    "directories": { "output": "dist", "buildResources": "build" },
+    "files": ["main.js", "preload.js", "www/**/*"],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "دستیار سبحان بتن"
+    },
+    "portable": { "artifactName": "SobhanBeton-Portable-${version}.exe" }
+  }
+}
