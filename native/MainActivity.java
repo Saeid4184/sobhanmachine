@@ -1,4 +1,4 @@
-package ir.sobhanbeton.assistant;
+package ir.sobhanbeton.app;
 
 import android.os.Bundle;
 import com.getcapacitor.BridgeActivity;
