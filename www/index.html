@@ -2386,7 +2386,9 @@ document.addEventListener("change",async e=>{const el=e.target;
     await save("sms",Object.assign({},x,u)); }});
 addEventListener("hashchange",()=>{const h=location.hash.slice(1); if(TABS.some(t=>t[0]===h)&&h!==tab){tab=h;render();}});
 
+
 render(); load();
 </script>
+<script src="sync.js"></script>
 </body>
 </html>
